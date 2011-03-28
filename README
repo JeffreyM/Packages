@@ -1,9 +1,10 @@
-NODE_VERSION=0.4.4 
-
+# for new ec2 instance
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get -y install git-core openssl libssl-dev
 cd ~
 git clone git://github.com/JeffreyM/Packages.git
 cd ./packages
-sudo mv ./node-v$NODE_VERSION-$HOSTTYPE /usr/local/bin/node
-sudo chmod 0755 /usr/local/bin/node
+./install-node.sh
 
 
